@@ -52,16 +52,39 @@
 }
 
 .about {
+  margin-top: 5%;
+}
+
+.project {
   margin-top: 2.5%;
 }
 
-section {
-  margin-top: 3%;
+.breakLine {
+  margin-top: 2.5%;
 }
 
-.resume {
-  margin-top: 2.5%;
-  border: solid 1px yellow;
+.server {
+  margin-top: 5%;
+}
+
+.contact {
+  margin-top: 5%;
+  background-color: #545496;
+}
+.contact__title {
+  font-size: 5vmin;
+  padding-top: 3%;
+  color: white;
+}
+.contact .container {
+  height: 20vh;
+}
+
+.fakeInput {
+  position: absolute;
+  top: -100000px;
+  opacity: 0;
+  z-index: -10;
 }
 
 ul {
@@ -80,32 +103,56 @@ ul {
   letter-spacing: 1px;
 }
 
-.services {
-  border: solid 1px black;
-}
-.services--list {
+.services__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.services--list img {
+.services__list img {
   width: 100px;
   height: 100px;
 }
 
-.contact {
-  height: 200px;
-  border: solid 1px black;
+.inner {
+  overflow: hidden;
 }
-.contact--list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.inner img {
+  transition: all 1.5s ease;
 }
-.contact--list img {
-  width: 50px;
-  height: 50px;
-  margin-right: 30px;
+.inner:hover img {
+  transform: scale(1.5);
+}
+
+.cardflip--container {
+  perspective: 1000;
+}
+
+/* flip the pane when hovered */
+.cardflip-container:hover .cardflipper,
+.cardflip-container.hover .cardflipper {
+  transform: rotateY(180deg);
+}
+
+.cardflipper {
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+.card--front, .card--back {
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+.card--front {
+  z-index: 2;
+}
+.card--back {
+  transform: rotateY(180deg);
+}
+
+.myEmail {
+  display: inline-block;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
